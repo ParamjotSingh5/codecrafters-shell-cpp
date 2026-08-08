@@ -12,4 +12,3 @@ int main() {
   std::cin >> input;
   std::cout << input << ": command not found";
 }
-z
