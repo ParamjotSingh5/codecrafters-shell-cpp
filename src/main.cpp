@@ -7,4 +7,10 @@ int main() {
   std::cerr << std::unitbuf;
 
   std::cout << "$ ";
+
+  char input[100];
+
+  std::cin >> input;
+
+  std::cout << input << ": command not found";
 }
