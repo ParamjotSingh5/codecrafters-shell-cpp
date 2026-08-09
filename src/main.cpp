@@ -8,15 +8,17 @@ int main() {
   std::string PS1 = "$ ";
 
   while(true) {
-    std::string command;
     std::cout << PS1;
-    std::cin >> command;
 
-    if(command == "exit") {
-      // Exit the shell
+    std::string input;
+    std::getline(std::cin, input);
+
+    if (input == "exit") {
       break;
+    } else if (input.substr(0, 5) == "echo ") {
+      std::cout << input.substr(5) << std::endl;
+    } else {
+      std::cout << input << ": command not found" << std::endl;
     }
-
-    std::cout << command << ": command not found" << std::endl;
   }
 }
